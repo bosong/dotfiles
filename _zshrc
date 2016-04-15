@@ -103,7 +103,7 @@ export EDITOR='vim'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-#coreutils
+# coreutils
 if  type "brew" > /dev/null; then
     if brew list | grep coreutils > /dev/null ; then
         PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
@@ -113,13 +113,15 @@ if  type "brew" > /dev/null; then
     fi
 fi
 
-#ruby
+# ruby
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
 PATH=$PATH:/usr/local/share/npm/bin
 
-#python
+# python
 export PYENV_ROOT=/usr/local/opt/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
@@ -127,17 +129,17 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export GRADLE_HOME=/usr/local/opt/gradle/libexec
 
+# THEOS
+export THEOS=/opt/theos
 
-export LC_ALL="en_US.UTF-8"
-
-#export THEOS=/opt/theos
-#export THEOS=/usr/local/opt/theos
-
-#export HOMEBREW_CASK_OPTS="--caskroom=/Applications"
+# phabricator
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/opt/codereview/arcanist/bin:/opt/codereview/phabricator/bin"
-#export PATH="/Applications/XAMPP/bin:$PATH"
 
-SONAR_RUNNER_HOME=/usr/local/Cellar/sonar-runner/2.4/libexec
 
+# git
 export PATH="/usr/local/opt/git/libexec/git-core:$PATH"
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
