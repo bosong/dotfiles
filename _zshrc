@@ -143,3 +143,5 @@ export PATH="/usr/local/opt/git/libexec/git-core:$PATH"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
+# SONAR_HOME
+SONAR_RUNNER_HOME=/usr/local/Cellar/sonar-runner/2.5/libexec
