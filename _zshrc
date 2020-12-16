@@ -1,5 +1,6 @@
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # check if there's no init script
 if ! zgen saved; then
@@ -83,7 +84,8 @@ export PATH=/usr/local/opt/podenv/bin:${PATH}
   alias command_help_protobuf='vim /Users/songbo/Documents/B_Work/command_help/command_help_protobuf.txt'
   alias command_help_python='vim /Users/songbo/Documents/B_Work/command_help/command_help_python.txt'
   alias command_help_homebrew='vim /Users/songbo/Documents/B_Work/command_help/command_help_homebrew.txt'
- # Set to this to use case-sensitive completion
+  alias open_host='sudo vim /etc/hosts'
+# Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
 # Uncomment this to disable bi-weekly auto-update checks
